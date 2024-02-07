@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtime Drawing</title>
+  <style>
+    /* Add styles to make the entire page fullscreen */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Create a drawing area by adding the canvas element -->
+  <canvas id="myCanvas" style="border: 1px solid #000;"></canvas>
+
+  <!-- Include Socket.IO and Paper.js libraries for client-side scripting -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
+
+  <!-- Include the client-side script file containing game controls -->
+  <script src="app.js"></script>
+</body>
+
+</html>
